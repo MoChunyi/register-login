@@ -7,6 +7,7 @@
 
 ## 流程图
 #### 注册
-![注册流程图]()
+![注册流程图](https://raw.githubusercontent.com/MoChunyi/register-login/master/src/assets/imags/register.png)
 #### 登录
+![登录流程图](https://raw.githubusercontent.com/MoChunyi/register-login/master/src/assets/imags/login.png)
 
