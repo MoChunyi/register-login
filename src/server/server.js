@@ -45,13 +45,9 @@ function authenticateEmail(email, clientRandomValue) {
     var b64encoder = base64url.encode(clientRandomValue.toString())
     // 创建一个邮件对象
     var mail = {
-        // 发件人
         from: 'mochunyi <1935358563@qq.com>',
-        // 主题
         subject: '激活邮箱账号',
-        // 收件人
         to: `${email}`,
-        // 邮件内容，HTML格式
         html: `
             <p>还不上车，老表</p>
             <a href='http://localhost:3000/checkemail#${b64encoder}'>http://localhost:3000/checkemail#${b64encoder}</a>
@@ -123,7 +119,6 @@ router.post('/login', koaBody(), async ctx => {
     var resbody = {
         code: -1,
     }
-
     for (let i = 0; i < global.users.length; i++) {
         if (global.users[i].email === email && global.users[i].authenticateEmail) {
             resbody.code = 200;
